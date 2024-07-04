@@ -16,16 +16,75 @@ title: Тестовое задание
 
 -  **Метод**: POST
 
--  **URL**: `http://localhost:8000/api/tasks`
+-  **URL**:  `http://localhost:8000/api/tasks`
 
--  **Тело запроса**: JSON
+-  **Тело запроса**: `JSON`
 
 ```
 {
-    "title": "Test Task",
-    "description": "This is a test task",
+    "title": "Тестовое задание",
+    "description": "Это тестовое задание",
     "status": "pending"
 }
 ```
 
 ![](./README.png)
+
+
+
+#### *Получение всех задач с фильтрацией :*
+
+-  **Метод**: GET
+
+-  **URL**: `http://localhost:8000/api/tasks?status=pending&date=2024-07-04`
+
+-  **Параметры запроса**: (опционально)
+
+   ```
+   - status: (например, pending)
+   - date: (например, 2024-07-04)
+   ```
+
+![](./README-2.png)
+
+
+
+#### *Получение задачи по ID :*
+
+-  **Метод**: GET
+
+-  **URL**:  `http://localhost:8000/api/tasks/1`
+
+![](./README-3.png)
+
+
+
+#### *Обновление задачи :*
+
+-  **Метод**: PUT
+
+-  **URL**:  `http://localhost:8000/api/tasks/4`
+
+-  **Тело запроса**:  `JSON`
+
+```
+{
+    "title": "Обновленное название задачи",
+    "description": "Обновленное описание задачи",
+    "status": "completed"
+}
+```
+
+![](./README-4.png)
+
+
+
+#### *Удаление задачи :*
+
+-  **Метод**: DELETE
+
+-  **URL**:  `http://localhost:8000/api/tasks/4`
+
+![](./README-5.png)
+
+
